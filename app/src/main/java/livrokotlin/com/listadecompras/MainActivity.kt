@@ -36,8 +36,12 @@ class MainActivity : Activity() {
                 txt_produto.error = "preecha o campo"
             }
         }
+        list_view_produtos.setOnItemLongClickListener {
+            adapterView : AdapterView < * >, view: View, position: Int, id: Long ->
+            val item = produtosAdapter.getItem(position)
+            produtosAdapter.remove(item)
+            true
+        }
 
-        list_view_produtos.setOnLongClickListener { adapterView: AdapterView,
-        view:View, }
     }
 }
