@@ -1,6 +1,8 @@
 package livrokotlin.com.listadecompras
 
 import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -16,9 +18,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.layout)
 
         // Referências aos componentes do layout
-        val txt_produto = findViewById<EditText>(R.id.txt_produto)
+        //val txt_produto = findViewById<EditText>(R.id.txt_produto)
         val list_view_produtos = findViewById<ListView>(R.id.list_view)
-        val btn_inserir = findViewById<Button>(R.id.btn_inserir)
+        val btn_adicionar = findViewById<Button>(R.id.btn_adicionar)
 
         // Criando o ArrayAdapter para a ListView
         val produtosAdapter = ArrayAdapter<String>(
@@ -36,6 +38,13 @@ class MainActivity : AppCompatActivity() {
 
             true
         }
+
+        btn_adicionar.setOnClickListener{
+            val intent = Intent(this, CadastroActivity::class.java)
+            startActivity(intent)
+        }
+
+
 
     }
 }
