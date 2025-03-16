@@ -12,26 +12,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ListaDeCompras"
         tools:targetApi="31">
+
+        <!-- MainActivity: Launcher Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.ListaDeCompras">
+            android:theme="@style/Theme.AppCompat.DayNight">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
-
         </activity>
 
-        <activity android:name=".CadastroActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+        <!-- CadastroActivity: Activity para adicionar produto -->
+        <activity
+            android:name=".CadastroActivity"
+            android:exported="true">
+            <!-- Meta-data removido, a menos que seja necessário para a navegação hierárquica -->
         </activity>
+
     </application>
 
 </manifest>
