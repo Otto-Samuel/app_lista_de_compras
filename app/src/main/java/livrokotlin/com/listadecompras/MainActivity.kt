@@ -8,8 +8,9 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : Activity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout)
@@ -27,15 +28,7 @@ class MainActivity : Activity() {
         list_view_produtos.adapter = produtosAdapter
 
         // Ação do botão inserir
-        btn_inserir.setOnClickListener {
-            val produto = txt_produto.text.toString()
-            if (produto.isNotEmpty()) { // Verifica se o campo não está vazio
-                produtosAdapter.add(produto)
-                txt_produto.text.clear() // Limpa o campo após adicionar
-            }else{
-                txt_produto.error = "preecha o campo"
-            }
-        }
+
         list_view_produtos.setOnItemLongClickListener { adapterView:AdapterView <*>, view: View,
                                                         position: Int, id: Long ->
             val item = produtosAdapter.getItem(position)

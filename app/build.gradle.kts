@@ -56,4 +56,16 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // para o appcompatActivity
+    implementation("androidx.appcompat:appcompat:1.6.1")  // AppCompat
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")  // Layouts
+
+    /*
+    * compose
+    * */
+    implementation("androidx.compose.ui:ui:1.4.0")  // Biblioteca básica do Compose
+    implementation("androidx.compose.material3:material3:1.1.0")  // Material3 para UI
+    implementation("androidx.compose.ui:ui-tooling-preview:1.4.0")  // Ferramentas de pré-visualização do Compose
+
 }
