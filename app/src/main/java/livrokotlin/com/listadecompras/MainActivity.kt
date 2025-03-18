@@ -35,10 +35,11 @@ class MainActivity : AppCompatActivity() {
                                                         position: Int, id: Long ->
             val item = produtosAdapter.getItem(position)
             produtosAdapter.remove(item)
-
             true
         }
-
+        /*
+        * navegacao entre telas
+        * */
         btn_adicionar.setOnClickListener{
             val intent = Intent(this, CadastroActivity::class.java)
             startActivity(intent)
