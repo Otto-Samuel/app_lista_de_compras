@@ -37,6 +37,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:text=" Qtd"
+                android:id="@+id/txt_item_qtd"
                 android:textStyle="bold" />
         </LinearLayout>
 
